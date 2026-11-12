@@ -16,7 +16,7 @@ DIST = os.path.join(ROOT, 'dist')
 SELF = os.environ.get('GITHUB_REPOSITORY', 'chartmann1590/hartmann-studios-fdroid')
 REPO_URL = os.environ.get('FDROID_REPO_URL', 'https://charleshartmann.com/fdroid/repo')
 TOKEN = os.environ.get('GH_TOKEN') or os.environ.get('GITHUB_TOKEN')
-BUNDLE_VERSION = 3   # bump to force a rebuild after changing this script's output
+BUNDLE_VERSION = 4   # bump to force a rebuild after changing this script's output
 
 
 def api(path):
@@ -118,6 +118,39 @@ def manifest_flags(apk_path):
         return {'admob': True, 'internet': True, 'package': None}  # assume the worst: mark ads
 
 
+def apk_icon(apk_path, dest):
+    """Fallback icon: the launcher icon bitmap inside the APK (highest density PNG/WebP)."""
+    import zipfile, io
+    from PIL import Image
+    try:
+        try:
+            from androguard.core.apk import APK
+        except ImportError:
+            from androguard.core.bytecodes.apk import APK
+        path = APK(apk_path).get_app_icon() or ''
+    except Exception:
+        path = ''
+    base = os.path.splitext(os.path.basename(path))[0] if path else 'ic_launcher'
+    z = zipfile.ZipFile(apk_path)
+    cands = []
+    for n in z.namelist():
+        b = os.path.splitext(os.path.basename(n))[0]
+        if n.startswith('res/') and n.lower().endswith(('.png', '.webp')) and b in (base, base + '_round', 'ic_launcher', 'app_icon'):
+            cands.append((z.getinfo(n).file_size, n))
+    if path.lower().endswith(('.png', '.webp')) and path in z.namelist():
+        cands.append((10 ** 9, path))
+    for _, n in sorted(cands, reverse=True):
+        try:
+            im = Image.open(io.BytesIO(z.read(n))).convert('RGBA')
+            if im.size[0] >= 48:
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
+                im.resize((512, 512)).save(dest)
+                return True
+        except Exception:
+            continue
+    return False
+
+
 def yq(s):
     return json.dumps(s, ensure_ascii=False)  # JSON strings are valid YAML scalars
 
@@ -217,6 +250,9 @@ def build():
                 im.resize((512, 512)).save(os.path.join(d, 'icon.png'))
             except Exception as e:
                 print('icon failed', p['key'], e)
+        icon_png = os.path.join(FD, 'metadata', pkg, 'en-US', 'icon.png')
+        if not os.path.exists(icon_png):
+            print('apk icon', p['key'], apk_icon(apk, icon_png))
     ks = os.path.join(FD, 'keystore.p12')
     if os.environ.get('FDROID_KEYSTORE_B64'):
         import base64
