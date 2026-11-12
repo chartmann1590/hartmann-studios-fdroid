@@ -960,6 +960,22 @@
    "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.acreage.webp?v=1794464000",
    "type": "billing",
    "pricing": "$3.99/mo, $29.99/yr"
+  },
+  {
+   "key": "lidline",
+   "package_hint": "com.hartmannstudios.lidline",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^lidline-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Lidline",
+   "summary": "Canning batch log built around the jar label: fill the rack, check seals jar by",
+   "description": "Home canning batch log built around the jar label: fill a drawn canner rack, check seals jar by jar, print labels with a QR code and scan a jar months later to see its batch. Records your own tested source; gives no processing times.",
+   "categories": [
+    "Writing"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.lidline.webp?v=1794464000",
+   "type": "billing",
+   "pricing": "$12.99/yr, $24.99 once"
   }
  ]
 }
