@@ -1,0 +1,885 @@
+{
+ "_what": "Apps carried by the Hartmann Studios F-Droid repo. Each entry: the GitHub repo holding its Stripe 'direct' releases, a regex for the release tag, a regex for the APK asset. build.py picks the newest non-draft, non-prerelease release that matches.",
+ "apps": [
+  {
+   "key": "livecaptionn",
+   "package_hint": "com.charles.livecaptionn",
+   "repo": "chartmann1590/LiveTranscribe-Android",
+   "tag_regex": "direct",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "LiveCaptionN - Live Captions",
+   "summary": "Free live captions and translation that float over any app, video or call",
+   "description": "Free live captions and translation that float over any app, video or call. Offline on the phone, or on your own Whisper server.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.livecaptionn.webp?v=1792896802",
+   "type": "billing",
+   "pricing": "existing Stripe prices (live account)"
+  },
+  {
+   "key": "meshtalk",
+   "package_hint": "com.charles.meshtalk.app",
+   "repo": "chartmann1590/bluetooth-chat",
+   "tag_regex": "^build-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "MeshTalk: Bluetooth Mesh Chat",
+   "summary": "Chat, talk & AI over Bluetooth mesh. No internet, no accounts, offline.",
+   "description": "Chat, talk & AI over Bluetooth mesh. No internet, no accounts, offline.",
+   "categories": [
+    "Internet"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.meshtalk.app.webp?v=1792896804",
+   "type": "billing",
+   "pricing": "existing Stripe prices (live account)"
+  },
+  {
+   "key": "ollamaaichat",
+   "package_hint": "com.charles.ollama.client.play",
+   "repo": "chartmann1590/ollama-android-client",
+   "tag_regex": "^ci-\\d+",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Ollama AI Chat",
+   "summary": "Ollama AI chat client \u2014 remote server or fully offline on-device models.",
+   "description": "Ollama AI chat client \u2014 remote server or fully offline on-device models.",
+   "categories": [
+    "Internet"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.ollama.client.play.webp?v=1792896815",
+   "type": "billing",
+   "pricing": "Ad-Free $0.99/mo, $9.99/yr, $19.99 lifetime; Web Sync + Ad-Free $1.99/mo, $14.99/yr"
+  },
+  {
+   "key": "nightsay",
+   "package_hint": "com.charles.nightsay",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^nightsay-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Nightsay: Snore & Sleep Talk",
+   "summary": "Snore & sleep talk recorder with clips, a Sleep Score and insights on your phone",
+   "description": "Snore & sleep talk recorder with clips, a Sleep Score and insights on your phone",
+   "categories": [
+    "Reading"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.nightsay.webp?v=1792896809",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "shapeshade",
+   "package_hint": "com.charles.shapeshade",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^shapeshade-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Shape & Shade: Face Shape",
+   "summary": "Find your face shape and your best colors in seconds. Nothing is uploaded.",
+   "description": "Find your face shape and your best colors in seconds. Nothing is uploaded.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.shapeshade.webp?v=1792896829",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "pixeldream",
+   "package_hint": "com.hartmann.pixeldream",
+   "repo": "chartmann1590/pixeldream",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "PixelDream: Offline AI Images",
+   "summary": "Private, offline AI image generator. Your prompts and pictures never leave.",
+   "description": "Private, offline AI image generator. Your prompts and pictures never leave.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmann.pixeldream.webp?v=1792896863",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "nutrisnap",
+   "package_hint": "com.charles.nutrisnap",
+   "repo": "chartmann1590/nutrisnap",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "NutriSnap: AI Calorie Tracker",
+   "summary": "Snap meals for instant calories & macros. 100% offline AI, private.",
+   "description": "Snap meals for instant calories & macros. 100% offline AI, private.",
+   "categories": [
+    "Sports & Health"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.nutrisnap.webp?v=1792896811",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "aria",
+   "package_hint": "com.aria.assistant",
+   "repo": "chartmann1590/aria-assistant",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Aria: On-Device Assistant",
+   "summary": "Private voice AI assistant \u2014 offline, on-device, no cloud. Optional web search.",
+   "description": "Private voice AI assistant \u2014 offline, on-device, no cloud. Optional web search.",
+   "categories": [
+    "Internet"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.aria.assistant.webp?v=1792896777",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "auracastweather",
+   "package_hint": "com.auracast.weather",
+   "repo": "chartmann1590/auracast-weather",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "AuraCast Weather",
+   "summary": "Your weather, narrated \u2014 on-device AI podcast + live radar. No account needed.",
+   "description": "Your weather, narrated \u2014 on-device AI podcast + live radar. No account needed.",
+   "categories": [
+    "Science & Education"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.auracast.weather.webp?v=1792896779",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "crowdtransit",
+   "package_hint": "com.charles.crowdtransit.app",
+   "repo": "chartmann1590/crowdsource-transit",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "CrowdTransit: Bus & Train",
+   "summary": "Free live transit stops, schedules & reviews. Track buses & trains nationwide.",
+   "description": "Free live transit stops, schedules & reviews. Track buses & trains nationwide.",
+   "categories": [
+    "Navigation"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.crowdtransit.app.webp?v=1792896788",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "cruisewatch",
+   "package_hint": "com.cruisewatch.app",
+   "repo": "chartmann1590/cruise-monitor",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "CruiseWatch: Fare Drop Alerts",
+   "summary": "Track cruises you've booked. Get alerted and claim refunds when fares drop.",
+   "description": "Track cruises you've booked. Get alerted and claim refunds when fares drop.",
+   "categories": [
+    "Money"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.cruisewatch.app.webp?v=1792896859",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "dosely",
+   "package_hint": "com.charles.dosely",
+   "repo": "chartmann1590/dosely",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Dosely: GLP-1 & Dose Tracker",
+   "summary": "Private GLP-1 injection tracker: 6-site rotation, medication level curves,...",
+   "description": "Private GLP-1 injection tracker: 6-site rotation, medication level curves, pen stock, weight, Wear OS sync and an offline AI coach. Data stays on the phone.",
+   "categories": [
+    "Sports & Health"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.dosely.webp?v=1792896793",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "morrowkept",
+   "package_hint": "com.charles.morrowkept",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^morrowkept-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Morrowkept: Audio Journal",
+   "summary": "Private audio journal with on-device transcripts, local AI, and Wear OS.",
+   "description": "Private audio journal with on-device transcripts, local AI, and Wear OS.",
+   "categories": [
+    "Writing"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.morrowkept.webp?v=1792896807",
+   "type": "billing",
+   "pricing": "morrowkept_ad_free_monthly $0.99/mo (Stripe, direct build)"
+  },
+  {
+   "key": "owefolk",
+   "package_hint": "com.charles.owefolk",
+   "repo": "chartmann1590/owefolk",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Owefolk",
+   "summary": "Shared tabs, clear friendships. Split expenses and settle up in your language.",
+   "description": "Shared tabs, clear friendships. Split expenses and settle up in your language.",
+   "categories": [
+    "Money"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.owefolk.webp?v=1792896817",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "scamradar",
+   "package_hint": "com.charles.scamradar.app",
+   "repo": "chartmann1590/ScamRadar",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "ScamRadar: AI Scam Detector",
+   "summary": "On-device AI catches scams in texts, voicemails & notifications. Free.",
+   "description": "On-device AI catches scams in texts, voicemails & notifications. Free.",
+   "categories": [
+    "Security"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.scamradar.app.webp?v=1792896827",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "tipsybuddy",
+   "package_hint": "com.tipsybuddy.app",
+   "repo": "chartmann1590/TipsyBuddy",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "TipsyBuddy: Drink & BAC Track",
+   "summary": "Track drinks, estimate BAC & sober time, share live location & get home safe.",
+   "description": "Track drinks, estimate BAC & sober time, share live location & get home safe.",
+   "categories": [
+    "Sports & Health"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.tipsybuddy.app.webp?v=1792896864",
+   "type": "billing",
+   "pricing": "tipsybuddy_ad_free_monthly $2.99/mo (Stripe, direct build)"
+  },
+  {
+   "key": "warmword",
+   "package_hint": "com.charles.warmwords",
+   "repo": "chartmann1590/warmword",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "WarmWord: AI Mental Health",
+   "summary": "Private on-device AI companion & journal. Available in your language.",
+   "description": "Private on-device AI companion & journal. Available in your language.",
+   "categories": [
+    "Writing"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.warmwords.webp?v=1792896841",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "pocketkin",
+   "package_hint": "com.pocketkin.game",
+   "repo": "chartmann1590/pocket-kin",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Pocket Kin: Virtual Pet",
+   "summary": "Raise and care for your own pocket pet. Feed, play and decorate its cottage.",
+   "description": "Raise and care for your own pocket pet. Feed, play and decorate its cottage.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": null,
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "photobooth",
+   "package_hint": "com.charles.photobooth",
+   "repo": "chartmann1590/android-photobooth",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Photobooth: Event Camera",
+   "summary": "Turn any Android device into a fun event photo booth with prints.",
+   "description": "Turn any Android device into a fun event photo booth with prints.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.photobooth.webp?v=1792896820",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "adhdfocuscompanion",
+   "package_hint": "com.chartmann.adhdfocuscompanion",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^adhdfocuscompanion-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "ADHD Focus Companion",
+   "summary": "One task, one timer, no shame",
+   "description": "One task, one timer, no shame. A focus companion for ADHD adults with kind nudges and a lock-screen timer.",
+   "categories": [
+    "Sports & Health"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.chartmann.adhdfocuscompanion.webp?v=1792896848",
+   "type": "billing",
+   "pricing": "$2.99/mo or $19.99/yr, 7-day trial (MONETIZATION-SPEC)"
+  },
+  {
+   "key": "evchargetracker",
+   "package_hint": "com.chartmann.evchargetracker",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^evchargetracker-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "EV Charge Tracker",
+   "summary": "Charging cost and efficiency done right: home vs public split, mi/kWh,...",
+   "description": "Charging cost and efficiency done right: home vs public split, mi/kWh, battery health, service reminders.",
+   "categories": [
+    "Navigation"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.chartmann.evchargetracker.webp?v=1792896850",
+   "type": "billing",
+   "pricing": "$2.99/mo or $19.99/yr, 7-day trial (MONETIZATION-SPEC)"
+  },
+  {
+   "key": "pantrytracker",
+   "package_hint": "com.chartmann.pantrytracker",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^pantrytracker-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Pantry Tracker",
+   "summary": "Scan it, date it, never waste it",
+   "description": "Scan it, date it, never waste it. Barcode entry, expiry alerts and a shopping list that restocks the pantry.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.chartmann.pantrytracker.webp?v=1792896856",
+   "type": "billing",
+   "pricing": "$2.99/mo or $19.99/yr, 7-day trial (MONETIZATION-SPEC)"
+  },
+  {
+   "key": "gigmileagetracker",
+   "package_hint": "com.chartmann.gigmileagetracker",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^gigmileagetracker-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Gig Mileage Tracker",
+   "summary": "Automatic mileage for rideshare and delivery drivers",
+   "description": "Automatic mileage for rideshare and delivery drivers. No trip caps, one-tap classify, IRS-ready CSV/PDF.",
+   "categories": [
+    "Navigation"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.chartmann.gigmileagetracker.webp?v=1792896852",
+   "type": "billing",
+   "pricing": "$2.99/mo or $19.99/yr, 7-day trial (MONETIZATION-SPEC)"
+  },
+  {
+   "key": "symptomdiary",
+   "package_hint": "com.chartmann.symptomdiary",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^symptomdiary-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Symptom Diary",
+   "summary": "One-tap migraine and IBS diary that correlates episodes with sleep and steps...",
+   "description": "One-tap migraine and IBS diary that correlates episodes with sleep and steps from Health Connect.",
+   "categories": [
+    "Sports & Health"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.chartmann.symptomdiary.webp?v=1792896857",
+   "type": "billing",
+   "pricing": "$2.99/mo or $19.99/yr, 7-day trial (MONETIZATION-SPEC)"
+  },
+  {
+   "key": "fieldkey",
+   "package_hint": "com.charles.fieldkey",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^fieldkey-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Fieldkey: Plant Rock Coin ID",
+   "summary": "Identify plants, rocks, minerals and US coins on your phone. Private, offline.",
+   "description": "Identify plants, rocks, minerals and US coins on your phone. Private, offline.",
+   "categories": [
+    "Science & Education"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.fieldkey.webp?v=1793295994",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "pawdub",
+   "package_hint": "com.charles.pawdub",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^pawdub-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Pawdub: Funny Pet Translator",
+   "summary": "Your pet gets funny movie subtitles in 59 languages. Real bark & meow detection.",
+   "description": "Your pet gets funny movie subtitles in 59 languages. Real bark & meow detection.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.pawdub.webp?v=1792896818",
+   "type": "billing",
+   "pricing": "pawdub_pro $4.99/mo or $24.99/yr (3-day trial), lifetime $39.99; packs $1.99, stickers $0.99, remove watermark $2.99 (projects.md Oct 15)"
+  },
+  {
+   "key": "eventcrew",
+   "package_hint": "com.charles.eventcrew",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^eventcrew-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "EventCrew: Find Your Group",
+   "summary": "Keep your group together at concerts and festivals. Friends join from a link.",
+   "description": "Keep your group together at concerts and festivals. Friends join from a link.",
+   "categories": [
+    "Time"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.eventcrew.webp?v=1792896795",
+   "type": "billing",
+   "pricing": "being read (SKUS.md)"
+  },
+  {
+   "key": "wildlens",
+   "package_hint": "com.charles.wildlens",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^wildlens-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Wild Lens: Jungle Rescue",
+   "summary": "Photograph jungle wildlife, expose a poacher ring and free animals with Pip.",
+   "description": "Photograph jungle wildlife, expose a poacher ring and free animals with Pip.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.wildlens.webp?v=1792896843",
+   "type": "game",
+   "pricing": "remove_ads + VIP $2.99/mo or $19.99/yr"
+  },
+  {
+   "key": "gizmogunners",
+   "package_hint": "com.charles.gizmogunners",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^gizmogunners-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Gizmo Gunners: Robot Shooter",
+   "summary": "Voiced story, heroes with powers, AI squad mates. A bright 3D robot shooter.",
+   "description": "Voiced story, heroes with powers, AI squad mates. A bright 3D robot shooter.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.gizmogunners.webp?v=1792896800",
+   "type": "game",
+   "pricing": "remove_ads + consumables (prices in SKUS.md)"
+  },
+  {
+   "key": "daycaredons",
+   "package_hint": "com.charles.daycaredons",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^daycaredons-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Daycare Dons: Diaper Empire",
+   "summary": "Toy water pistols, nap-time capers and a daycare underground. Rise to BABY BOSS!",
+   "description": "Toy water pistols, nap-time capers and a daycare underground. Rise to BABY BOSS!",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.daycaredons.webp?v=1792896791",
+   "type": "game",
+   "pricing": "remove_ads + VIP $2.99/mo or $19.99/yr"
+  },
+  {
+   "key": "deadtide",
+   "package_hint": "com.deadtide.hordesurvivor",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^deadtide-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Dead Tide",
+   "summary": "Top-down zombie horde survivor: auto-fire weapons, level-ups, a squad to rescue.",
+   "description": "Top-down zombie horde survivor: auto-fire weapons, level-ups, a squad to rescue.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.deadtide.hordesurvivor.webp?v=1793324149",
+   "type": "game",
+   "pricing": "ads + Remove Ads $2.99 once + gold packs $0.99/$2.99/$4.99 (Stripe, direct build)"
+  },
+  {
+   "key": "arcanedark",
+   "package_hint": "com.arcane.dndai.dnd_ai",
+   "repo": "chartmann1590/arcane-dark",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Arcane Dark",
+   "summary": "AI Dungeon Master on your phone. Solo offline & private, or co-op with friends.",
+   "description": "AI Dungeon Master on your phone. Solo offline & private, or co-op with friends.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.arcane.dndai.dnd_ai.webp?v=1792896775",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "captionburn",
+   "package_hint": "com.charlesh.captionburn",
+   "repo": "chartmann1590/captionburn",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "CaptionBurn: Video Captions",
+   "summary": "On-device auto-captions burned into video with built-in translation.",
+   "description": "On-device auto-captions burned into video with built-in translation.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charlesh.captionburn.webp?v=1792896845",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "cruiseloom",
+   "package_hint": "com.charles.cruiseapp",
+   "repo": "chartmann1590/cruise-app",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "CruiseLoom",
+   "summary": "Plan cruise days, ports, weather and nearby party chat\u2014even offline.",
+   "description": "Plan cruise days, ports, weather and nearby party chat\u2014even offline.",
+   "categories": [
+    "Time"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.cruiseapp.webp?v=1792896790",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "dreamloom",
+   "package_hint": "com.charles.app.dreamloom",
+   "repo": "chartmann1590/dreamloom",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Dreamloom: AI Dream Journal",
+   "summary": "Private dream journal: record by voice or text, on-device AI reads the meaning.",
+   "description": "Private dream journal: record by voice or text, on-device AI reads the meaning.",
+   "categories": [
+    "Writing"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.app.dreamloom.webp?v=1792896784",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "drivevault",
+   "package_hint": "com.drivevault.dashcam",
+   "repo": "chartmann1590/DriveVault",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "DriveVault: Dashcam",
+   "summary": "Privacy-first dashcam with GPS overlays, dual-camera & background recording.",
+   "description": "Privacy-first dashcam with GPS overlays, dual-camera & background recording.",
+   "categories": [
+    "Navigation"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.drivevault.dashcam.webp?v=1792896861",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "flashlight",
+   "package_hint": "com.charles.flashlight",
+   "repo": "chartmann1590/Flashlight",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Flashlight: Torch + SOS",
+   "summary": "Fast torch, screen light, SOS, shake toggle, widget & quick settings.",
+   "description": "Fast torch, screen light, SOS, shake toggle, widget & quick settings.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.flashlight.webp?v=1792896798",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "grocyfridgescanner",
+   "package_hint": "com.charleshartmann.grocyfridge",
+   "repo": "chartmann1590/GrocyFridgeScanner",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Grocy Fridge Scanner",
+   "summary": "Snap your fridge. On-device AI updates your Grocy stock in seconds.",
+   "description": "Snap your fridge. On-device AI updates your Grocy stock in seconds.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charleshartmann.grocyfridge.webp?v=1792896847",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "knightfall",
+   "package_hint": "com.chartmann.knightfall",
+   "repo": "chartmann1590/knightfall",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Knightfall: AI Chess Coach",
+   "summary": "Play chess against Stockfish AI with Gemma 4 coaching, online, or web.",
+   "description": "Play chess against Stockfish AI with Gemma 4 coaching, online, or web.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.chartmann.knightfall.webp?v=1792896854",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "octopulse",
+   "package_hint": "com.charles.octopulse",
+   "repo": "chartmann1590/octopulse",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "OctoPulse: OctoPrint Companion",
+   "summary": "Control your OctoPrint 3D printer from your phone. Monitor & print on Wi-Fi.",
+   "description": "Control your OctoPrint 3D printer from your phone. Monitor & print on Wi-Fi.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.octopulse.webp?v=1792896813",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "path",
+   "package_hint": "com.biblereadingpath.app",
+   "repo": "chartmann1590/path",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Path - Daily Bible Study",
+   "summary": "Build daily Bible study habits with gentle streaks.",
+   "description": "Build daily Bible study habits with gentle streaks.",
+   "categories": [
+    "Reading"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.biblereadingpath.app.webp?v=1792896781",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "pixelfishtank",
+   "package_hint": "com.charles.virtualpet.fishtank",
+   "repo": "chartmann1590/Pixel-Fish-Tank",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Pixel Fish Tank: Virtual Pet",
+   "summary": "Cozy virtual pet game \u2014 feed, clean & customize your pixel fish.",
+   "description": "Cozy virtual pet game \u2014 feed, clean & customize your pixel fish.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.virtualpet.fishtank.webp?v=1792896839",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "pocketassistant",
+   "package_hint": "com.charles.pocketassistant",
+   "repo": "chartmann1590/Pocket-Assistant",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Pocket Assistant: AI Organizer",
+   "summary": "Local AI organizer \u2014 bills, notes, chat, tasks & reminders on-device.",
+   "description": "Local AI organizer \u2014 bills, notes, chat, tasks & reminders on-device.",
+   "categories": [
+    "Internet"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.pocketassistant.webp?v=1792896822",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "provision",
+   "package_hint": "com.charles.provision",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^provision-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Provision: AI Meal Planner",
+   "summary": "On-device AI meal plans, real grocery prices, and a budget tracker.",
+   "description": "On-device AI meal plans, real grocery prices, and a budget tracker.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.provision.webp?v=1792896824",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "qrscanner",
+   "package_hint": "com.charles.qrcode",
+   "repo": "chartmann1590/qrcode-scanner-android",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "QR Scanner: Code Reader",
+   "summary": "Lightning-fast QR & barcode scanner. Scan, copy, share & history.",
+   "description": "Lightning-fast QR & barcode scanner. Scan, copy, share & history.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.qrcode.webp?v=1792896826",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "scripturesearch",
+   "package_hint": "com.charles.bible",
+   "repo": "chartmann1590/scripturesearch",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "ScriptureSearch",
+   "summary": "ScriptureSearch Find and compare verses from different translations of the Bible",
+   "description": "ScriptureSearch Find and compare verses from different translations of the Bible",
+   "categories": [
+    "Reading"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.bible.webp?v=1792896786",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "skypulse",
+   "package_hint": "com.charles.skypulse.app",
+   "repo": "chartmann1590/skypulse-android",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "SkyPulse: Live Flight Tracker",
+   "summary": "Track live flights overhead \u2014 aircraft, airports & smart alerts.",
+   "description": "Track live flights overhead \u2014 aircraft, airports & smart alerts.",
+   "categories": [
+    "Science & Education"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.skypulse.app.webp?v=1792896832",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "stickynotes",
+   "package_hint": "com.charles.stickynotes",
+   "repo": "chartmann1590/StickyNotes",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Sticky Notes: Quick Widget",
+   "summary": "Simple sticky note widget for your home screen. Quick notes & lists.",
+   "description": "Simple sticky note widget for your home screen. Quick notes & lists.",
+   "categories": [
+    "System"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.stickynotes.webp?v=1792896833",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "textpilotai",
+   "package_hint": "com.charles.messenger.v2",
+   "repo": "chartmann1590/textpilot",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "TextPilot AI: Smart Messaging",
+   "summary": "Clean SMS app with AI smart replies & web browser access to texts.",
+   "description": "Clean SMS app with AI smart replies & web browser access to texts.",
+   "categories": [
+    "Internet"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.messenger.v2.webp?v=1792896806",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "tradecoachai",
+   "package_hint": "com.charles.tradecoachai",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^tradecoachai-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "TradeCoach AI - Stock Coach",
+   "summary": "AI-powered stock trading coach with lessons, portfolio tracking & market data.",
+   "description": "AI-powered stock trading coach with lessons, portfolio tracking & market data.",
+   "categories": [
+    "Money"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.tradecoachai.webp?v=1792896835",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "trailsage",
+   "package_hint": "com.charles.trailsage",
+   "repo": "chartmann1590/trailsage-ai-android",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "TrailSage: AI Road Trip Guide",
+   "summary": "Offline GPS audio tour guide with on-device AI storytelling.",
+   "description": "Offline GPS audio tour guide with on-device AI storytelling.",
+   "categories": [
+    "Navigation"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.charles.trailsage.webp?v=1792896837",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "psalmwell",
+   "package_hint": "com.hartmannstudios.psalmwell",
+   "repo": "chartmann1590/psalmwell-android",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Psalmwell: Daily Bible Verse",
+   "summary": "A verse from the Psalms each day, all 150 Psalms to read, and a private journal.",
+   "description": "A verse from the Psalms each day, all 150 Psalms to read, and a private journal.",
+   "categories": [
+    "Reading"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.psalmwell.webp?v=1793333561",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "driftfeed",
+   "package_hint": "com.hartmannstudios.driftfeed",
+   "repo": "chartmann1590/AI-Social",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Driftfeed: Offline AI Stories",
+   "summary": "A make-believe social feed written by AI that runs on your phone, offline,...",
+   "description": "A make-believe social feed written by AI that runs on your phone, offline, with no account.",
+   "categories": [
+    "Internet"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.driftfeed.webp?v=1793731525",
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "lumaverse",
+   "package_hint": "com.chartmann1590.verselight",
+   "repo": "chartmann1590/verselight-android",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "LumaVerse: Daily Bible Verse",
+   "summary": "A daily Bible verse with a beautiful, calm design and reminders.",
+   "description": "A daily Bible verse with a beautiful, calm design and reminders.",
+   "categories": [
+    "Reading"
+   ],
+   "icon_url": null,
+   "type": "ads-only",
+   "pricing": "free + ads"
+  },
+  {
+   "key": "jurysimulator",
+   "package_hint": "com.charles.jurysim",
+   "repo": "chartmann1590/jury-simulator",
+   "tag_regex": "^direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Jury Simulator: Trial Verdict",
+   "summary": "Sit on the jury: hear the evidence, weigh the testimony and deliver your...",
+   "description": "Sit on the jury: hear the evidence, weigh the testimony and deliver your verdict.",
+   "categories": [
+    "Games"
+   ],
+   "icon_url": null,
+   "type": "ads-only",
+   "pricing": "free + ads"
+  }
+ ]
+}
