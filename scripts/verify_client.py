@@ -44,25 +44,27 @@ res = {'client': CLIENT, 'repo': REPO, 'test_pkg': PKG}
 sh('adb install -r client.apk', t=300)
 sh(f'adb shell appops set {CLIENT} REQUEST_INSTALL_PACKAGES allow')
 sh(f'adb shell pm grant {CLIENT} android.permission.POST_NOTIFICATIONS')
-sh(f'adb shell monkey -p {CLIENT} -c android.intent.category.LAUNCHER 1'); time.sleep(12); shot('client-start')
+sh(f'adb shell monkey -p {CLIENT} -c android.intent.category.LAUNCHER 1'); time.sleep(12); shot('client-start'); res_start = texts()[:30]
 for _ in range(3):
     tap(['Allow', 'OK', 'Got it', 'Continue', 'Skip', 'Next', 'Accept'], tries=2, wait=2)
 # add the repo through the standard add-repo deep link
-sh(f'adb shell am start -a android.intent.action.VIEW -d "{REPO}?fingerprint={FP}" {CLIENT}'); time.sleep(6); shot('add-repo-screen')
+link = os.environ.get('ADD_LINK') or REPO.replace('https://', 'fdroidrepos://') + '?fingerprint=' + FP
+sh(f'adb shell am start -a android.intent.action.VIEW -d "{link}" {CLIENT}'); time.sleep(6); shot('add-repo-screen'); res['add_screen_texts'] = texts()[:30]
 res['add_tap'] = tap(['Add', 'Save', 'Add repository', 'OK', 'Enable'], tries=6)
 time.sleep(5); shot('after-add')
 res['texts_after_add'] = texts()[:40]
+res['texts_start'] = res_start
 # give the sync time (our index + the client's default repos)
 time.sleep(60); shot('after-sync')
 # open the app page and install
 for attempt in range(6):
     sh(f'adb shell am start -a android.intent.action.VIEW -d "market://details?id={PKG}" {CLIENT}'); time.sleep(8)
-    shot(f'app-page-{attempt}')
+    shot(f'app-page-{attempt}'); res.setdefault('app_page_texts', []).append(texts()[:25])
     w = tap(['Install', 'INSTALL', 'Download'], tries=3)
     if w:
         res['install_tap'] = w; break
     time.sleep(30)
-time.sleep(25); shot('installer')
+time.sleep(25); shot('installer'); res['installer_texts'] = texts()[:25]
 res['confirm_tap'] = tap(['Install', 'INSTALL', 'Update', 'OK'], tries=8, wait=4)
 installed = False
 for i in range(30):
