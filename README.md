@@ -29,6 +29,22 @@ The apps then update automatically. Every app is marked honestly with its anti-f
 - **Force a rebuild:** run the workflow with `force` ticked, or bump `BUNDLE_VERSION` in `scripts/build.py`.
 - **Server force-refresh:** `FORCE=1 /usr/local/sbin/hs-fdroid-pull`; log at `/var/log/hs-fdroid-pull.log`.
 
+## Verify with a real client
+
+Actions → "Verify with a real client (emulator)" → Run workflow. It boots an Android 13 emulator, installs Droid-ify,
+adds this repo through the standard add-repo link, syncs, installs one app from it (default Flashlight) and uploads
+screenshots + `result.json` as the `client-verify` artifact.
+
+## Server files (charleshartmann.com, Ubuntu, nginx behind the Cloudflare tunnel)
+
+- `/etc/nginx/snippets/hs-fdroid.conf` (from `server/hs-fdroid.conf`), included in both `conf.d/wordpress_http(s).conf` server blocks
+- `/etc/nginx/conf.d/00-0-hs-fdroid-hash.conf` (`map_hash_bucket_size 256`, must load before the first map) and `conf.d/01-hs-fdroid-map.conf`
+- `/etc/nginx/hs-fdroid-apk-map.conf` (written by the pull script), `/var/www/fdroid/` (index.html, qr.png, repo/)
+- `/usr/local/sbin/hs-fdroid-pull` + `/etc/cron.d/hs-fdroid`
+- Backups of the edited nginx files: `/root/tab-backup-2026-11-12-fdroid/`
+
+Rollback: restore the two wordpress_http(s).conf files from that backup, delete the snippet, the two conf.d files and the cron file, `nginx -t && systemctl reload nginx`.
+
 ## Signing key
 
 The repo signing key (PKCS12, alias `hartmannstudios-fdroid`) is kept in Tab's vault, a root-only copy on the server
