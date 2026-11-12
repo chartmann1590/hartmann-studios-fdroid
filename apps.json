@@ -40,8 +40,8 @@
    "tag_regex": "^ci-\\d+",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "Ollama AI Chat",
-   "summary": "Ollama AI chat client \u2014 remote server or fully offline on-device models.",
-   "description": "Ollama AI chat client \u2014 remote server or fully offline on-device models.",
+   "summary": "Ollama AI chat client — remote server or fully offline on-device models.",
+   "description": "Ollama AI chat client — remote server or fully offline on-device models.",
    "categories": [
     "Internet"
    ],
@@ -120,8 +120,8 @@
    "tag_regex": "^direct-\\d+$",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "Aria: On-Device Assistant",
-   "summary": "Private voice AI assistant \u2014 offline, on-device, no cloud. Optional web search.",
-   "description": "Private voice AI assistant \u2014 offline, on-device, no cloud. Optional web search.",
+   "summary": "Private voice AI assistant — offline, on-device, no cloud. Optional web search.",
+   "description": "Private voice AI assistant — offline, on-device, no cloud. Optional web search.",
    "categories": [
     "Internet"
    ],
@@ -136,8 +136,8 @@
    "tag_regex": "^direct-\\d+$",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "AuraCast Weather",
-   "summary": "Your weather, narrated \u2014 on-device AI podcast + live radar. No account needed.",
-   "description": "Your weather, narrated \u2014 on-device AI podcast + live radar. No account needed.",
+   "summary": "Your weather, narrated — on-device AI podcast + live radar. No account needed.",
+   "description": "Your weather, narrated — on-device AI podcast + live radar. No account needed.",
    "categories": [
     "Science & Education"
    ],
@@ -536,8 +536,8 @@
    "tag_regex": "^direct-\\d+$",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "CruiseLoom",
-   "summary": "Plan cruise days, ports, weather and nearby party chat\u2014even offline.",
-   "description": "Plan cruise days, ports, weather and nearby party chat\u2014even offline.",
+   "summary": "Plan cruise days, ports, weather and nearby party chat—even offline.",
+   "description": "Plan cruise days, ports, weather and nearby party chat—even offline.",
    "categories": [
     "Time"
    ],
@@ -664,8 +664,8 @@
    "tag_regex": "^direct-\\d+$",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "Pixel Fish Tank: Virtual Pet",
-   "summary": "Cozy virtual pet game \u2014 feed, clean & customize your pixel fish.",
-   "description": "Cozy virtual pet game \u2014 feed, clean & customize your pixel fish.",
+   "summary": "Cozy virtual pet game — feed, clean & customize your pixel fish.",
+   "description": "Cozy virtual pet game — feed, clean & customize your pixel fish.",
    "categories": [
     "Games"
    ],
@@ -680,8 +680,8 @@
    "tag_regex": "^direct-\\d+$",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "Pocket Assistant: AI Organizer",
-   "summary": "Local AI organizer \u2014 bills, notes, chat, tasks & reminders on-device.",
-   "description": "Local AI organizer \u2014 bills, notes, chat, tasks & reminders on-device.",
+   "summary": "Local AI organizer — bills, notes, chat, tasks & reminders on-device.",
+   "description": "Local AI organizer — bills, notes, chat, tasks & reminders on-device.",
    "categories": [
     "Internet"
    ],
@@ -744,8 +744,8 @@
    "tag_regex": "^direct-\\d+$",
    "asset_regex": "(?i)(direct|github).*\\.apk$",
    "title": "SkyPulse: Live Flight Tracker",
-   "summary": "Track live flights overhead \u2014 aircraft, airports & smart alerts.",
-   "description": "Track live flights overhead \u2014 aircraft, airports & smart alerts.",
+   "summary": "Track live flights overhead — aircraft, airports & smart alerts.",
+   "description": "Track live flights overhead — aircraft, airports & smart alerts.",
    "categories": [
     "Science & Education"
    ],
@@ -880,6 +880,70 @@
    "icon_url": null,
    "type": "ads-only",
    "pricing": "free + ads"
+  },
+  {
+   "key": "doorframe",
+   "package_hint": "com.hartmannstudios.doorframe",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^doorframe-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Doorframe",
+   "summary": "Move-in and move-out photos for renters: a room-by-room shot list, ghost",
+   "description": "Move-in and move-out photo evidence for renters. Opens straight into the camera with a room-by-room shot list; at move-out it ghosts the old photo over the camera so you match the angle, shows then/now with a slider, and exports a dated PDF with photo fingerprints.",
+   "categories": [
+    "Multimedia"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.doorframe.webp?v=1794464000",
+   "type": "billing",
+   "pricing": "$2.99/mo, $12.99 once"
+  },
+  {
+   "key": "regday",
+   "package_hint": "com.hartmannstudios.regday",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^regday-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Regday",
+   "summary": "Scuba gear service timeline: see what's due before your next dive trip, build",
+   "description": "Scuba gear service timeline and dive trip prep: a 12-month view of when each piece of gear is due for service, trip warnings for what comes due before you leave, a packing list and a wallet for cert cards. No safety or deco claims.",
+   "categories": [
+    "Sports & Health"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.regday.webp?v=1794464000",
+   "type": "billing",
+   "pricing": "$2.99/mo, $24.99/yr"
+  },
+  {
+   "key": "hivecall",
+   "package_hint": "com.hartmannstudios.hivecall",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^hivecall-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Hivecall",
+   "summary": "Hands-free hive inspections: the phone asks the questions out loud and you",
+   "description": "Hands-free beekeeping inspections: the phone asks the inspection questions out loud and you answer with gloves on (volume buttons work too). Each hive is drawn as a stack of boxes coloured by what you found, plus a mite-count calculator.",
+   "categories": [
+    "Science & Education"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.hivecall.webp?v=1794464000",
+   "type": "billing",
+   "pricing": "$2.99/mo, $24.99/yr"
+  },
+  {
+   "key": "featherdeck",
+   "package_hint": "com.hartmannstudios.featherdeck",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^featherdeck-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Featherdeck",
+   "summary": "Backyard flock app: a card per hen with photo and timeline, egg carton counter,",
+   "description": "Backyard flock manager: every bird gets its own card with a photo, name and life timeline. Count eggs into a drawn carton for dozens and cost per dozen, and track hatches with a countdown.",
+   "categories": [
+    "Science & Education"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.featherdeck.webp?v=1794464000",
+   "type": "billing",
+   "pricing": "$2.49/mo, $19.99/yr, $24.99 once"
   }
  ]
 }
