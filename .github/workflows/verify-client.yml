@@ -10,6 +10,9 @@ on:
         description: 'droidify or fdroid'
         default: 'droidify'
 
+permissions:
+  contents: write
+
 jobs:
   verify:
     runs-on: ubuntu-24.04
