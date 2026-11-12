@@ -25,7 +25,11 @@ def find(words):
         t = (re.search(r' text="([^"]*)"', node) or [None, ''])[1]
         d = (re.search(r' content-desc="([^"]*)"', node) or [None, ''])[1]
         for w in words:
-            if w.lower() == t.strip().lower() or w.lower() == d.strip().lower():
+            if w.startswith('~'):
+                hit = w[1:].lower() in d.lower() or w[1:].lower() in t.lower()
+            else:
+                hit = w.lower() == t.strip().lower() or w.lower() == d.strip().lower()
+            if hit:
                 b = re.search(r'bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', node)
                 if b:
                     x1, y1, x2, y2 = map(int, b.groups())
@@ -54,8 +58,19 @@ res['add_tap'] = tap(['Add', 'Save', 'Add repository', 'OK', 'Enable'], tries=6)
 time.sleep(5); shot('after-add')
 res['texts_after_add'] = texts()[:40]
 res['texts_start'] = res_start
-# give the sync time (our index + the client's default repos)
-time.sleep(60); shot('after-sync')
+# trigger a sync and wait until our repo's apps show up (the client's default repo syncs too)
+res['sync_tap'] = tap(['~Sync', '~sync', '~Refresh'], tries=3)
+found = False
+for i in range(16):
+    time.sleep(20)
+    tx = texts()
+    if any('Hartmann' in x or 'Flashlight' in x or 'LiveCaption' in x for x in tx):
+        found = True; break
+    if i in (5, 10):
+        tap(['~Sync', '~sync'], tries=1)
+res['apps_listed'] = found
+res['main_texts_after_sync'] = texts()[:40]
+shot('after-sync')
 # open the app page and install
 for attempt in range(6):
     sh(f'adb shell am start -a android.intent.action.VIEW -d "market://details?id={PKG}" {CLIENT}'); time.sleep(8)
