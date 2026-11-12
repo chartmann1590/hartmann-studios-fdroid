@@ -944,6 +944,22 @@
    "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.featherdeck.webp?v=1794464000",
    "type": "billing",
    "pricing": "$2.49/mo, $19.99/yr, $24.99 once"
+  },
+  {
+   "key": "acreage",
+   "package_hint": "com.hartmannstudios.acreage",
+   "repo": "chartmann1590/hartmann-studios-apps",
+   "tag_regex": "^acreage-direct-\\d+$",
+   "asset_regex": "(?i)(direct|github).*\\.apk$",
+   "title": "Acreage",
+   "summary": "Rural home systems on a map: pin the well, septic, propane and generator, see",
+   "description": "A map of your property for rural homes: drop pins for the well, septic, propane, generator and shutoffs, tap one to see what's due, save the GPS spot of a buried septic lid, and switch on power-out mode to see what stops working.",
+   "categories": [
+    "Navigation"
+   ],
+   "icon_url": "https://charleshartmann.com/wp-content/mu-plugins/hs-showcase/icons/com.hartmannstudios.acreage.webp?v=1794464000",
+   "type": "billing",
+   "pricing": "$3.99/mo, $29.99/yr"
   }
  ]
 }
